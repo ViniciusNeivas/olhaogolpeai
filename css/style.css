@@ -1176,3 +1176,258 @@ button {
     }
 
 }
+
+/* ========================================
+   POPUP DE AVALIAÇÃO
+======================================== */
+
+.feedback-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 300;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background: rgba(15, 23, 42, 0.68);
+
+    backdrop-filter: blur(6px);
+
+    animation: feedbackFadeIn 0.3s ease;
+}
+
+
+.feedback-modal {
+    position: relative;
+
+    width: min(480px, 100%);
+
+    padding: 40px;
+
+    background: white;
+
+    border-radius: 24px;
+
+    box-shadow:
+        0 30px 90px rgba(0, 0, 0, 0.28);
+
+    text-align: center;
+
+    animation: feedbackSlideUp 0.35s ease;
+}
+
+
+.feedback-close {
+    position: absolute;
+
+    top: 15px;
+    right: 17px;
+
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f1f5f9;
+
+    color: #64748b;
+
+    font-size: 23px;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.feedback-close:hover {
+    background: #e2e8f0;
+
+    color: #172033;
+}
+
+
+.feedback-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    border-radius: 18px;
+
+    background: var(--primary-light);
+
+    font-size: 30px;
+}
+
+
+.feedback-modal .section-label {
+    margin-bottom: 10px;
+}
+
+
+.feedback-modal h2 {
+    max-width: 370px;
+
+    margin: 0 auto 15px;
+
+    color: var(--text);
+
+    font-size: 28px;
+
+    line-height: 1.2;
+
+    letter-spacing: -0.8px;
+}
+
+
+.feedback-modal > p {
+    max-width: 390px;
+
+    margin: 0 auto 22px;
+
+    color: var(--text-light);
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+.feedback-highlight {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px;
+
+    margin-bottom: 25px;
+
+    border-radius: 14px;
+
+    background: #f8fafc;
+
+    border: 1px solid var(--border);
+
+    text-align: left;
+}
+
+
+.feedback-highlight > span {
+    font-size: 24px;
+}
+
+
+.feedback-highlight strong {
+    display: block;
+
+    margin-bottom: 2px;
+
+    font-size: 13px;
+}
+
+
+.feedback-highlight small {
+    display: block;
+
+    color: var(--text-light);
+
+    font-size: 12px;
+
+    line-height: 1.4;
+}
+
+
+.feedback-actions {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+
+.feedback-actions .button {
+    width: 100%;
+}
+
+
+.feedback-later {
+    padding: 10px;
+
+    border: none;
+
+    background: transparent;
+
+    color: var(--text-light);
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.feedback-later:hover {
+    color: var(--primary);
+}
+
+
+@keyframes feedbackFadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+
+@keyframes feedbackSlideUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .feedback-modal {
+        padding: 32px 22px;
+    }
+
+    .feedback-modal h2 {
+        font-size: 24px;
+    }
+
+}

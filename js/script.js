@@ -1,4 +1,4 @@
-/* ========================================
+    /* ========================================
    MENU MOBILE
 ======================================== */
 
@@ -543,6 +543,13 @@ function showResult() {
 
     }
 
+
+    /*
+     * Aguarda alguns segundos depois que
+     * o usuário vê o resultado.
+     */
+    scheduleFeedbackAfterQuiz();
+
 }
 
 
@@ -576,3 +583,153 @@ restartQuiz.addEventListener("click", () => {
 ======================================== */
 
 loadQuestion();
+
+/* ========================================
+   POPUP DE AVALIAÇÃO
+======================================== */
+
+const GOOGLE_FORMS_URL =
+    "COLE_AQUI_O_LINK_DO_GOOGLE_FORMS";
+
+const FEEDBACK_DELAY =
+    5000;
+
+let feedbackTimer = null;
+
+/* ========================================
+   ELEMENTOS DO POPUP
+======================================== */
+
+const feedbackOverlay =
+    document.getElementById("feedbackOverlay");
+
+const feedbackClose =
+    document.getElementById("feedbackClose");
+
+const feedbackLater =
+    document.getElementById("feedbackLater");
+
+const feedbackFormButton =
+    document.getElementById("feedbackFormButton");
+
+
+/* ========================================
+   CONFIGURA GOOGLE FORMS
+======================================== */
+
+if (feedbackFormButton) {
+
+    feedbackFormButton.href =
+        GOOGLE_FORMS_URL;
+
+}
+
+/* ========================================
+   MOSTRAR POPUP
+======================================== */
+
+function showFeedbackPopup() {
+
+    feedbackOverlay.classList.remove("hidden");
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+/* ========================================
+   FECHAR POPUP
+======================================== */
+
+function closeFeedbackPopup() {
+
+    feedbackOverlay.classList.add("hidden");
+
+    document.body.style.overflow = "";
+
+}
+
+
+/* ========================================
+   BOTÃO X
+======================================== */
+
+feedbackClose.addEventListener(
+    "click",
+    closeFeedbackPopup
+);
+
+
+/* ========================================
+   BOTÃO "AGORA NÃO"
+======================================== */
+
+feedbackLater.addEventListener(
+    "click",
+    closeFeedbackPopup
+);
+
+
+/* ========================================
+   CLICAR FORA DO POPUP
+======================================== */
+
+feedbackOverlay.addEventListener(
+    "click",
+    function(event) {
+
+        if (
+            event.target === feedbackOverlay
+        ) {
+
+            closeFeedbackPopup();
+
+        }
+
+    }
+);
+
+
+/* ========================================
+   TECLA ESC
+======================================== */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (
+            event.key === "Escape" &&
+            !feedbackOverlay.classList.contains("hidden")
+        ) {
+
+            closeFeedbackPopup();
+
+        }
+
+    }
+);
+
+
+/* ========================================
+   AGENDAR POPUP APÓS O QUIZ
+======================================== */
+
+function scheduleFeedbackAfterQuiz() {
+
+    if (feedbackTimer) {
+        clearTimeout(feedbackTimer);
+    }
+
+    feedbackTimer = setTimeout(
+        function() {
+
+            showFeedbackPopup();
+
+            feedbackTimer = null;
+
+        },
+        FEEDBACK_DELAY
+    );
+
+}
