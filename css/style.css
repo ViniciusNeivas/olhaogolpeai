@@ -1655,3 +1655,54 @@ button {
 
     object-fit: contain;
 }
+
+/* ========================================
+   FILTRO DOS GOLPES
+======================================== */
+
+.scam-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: -20px 0 30px;
+}
+
+.scam-filter {
+    padding: 10px 16px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: white;
+    color: var(--text-light);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.scam-filter:hover,
+.scam-filter.active {
+    border-color: var(--primary);
+    background: var(--primary-light);
+    color: var(--primary);
+}
+
+.scam-type {
+    display: block;
+    margin-top: 6px;
+    color: var(--text-light);
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: .7px;
+}
+
+@media (max-width: 700px) {
+    .scam-filters {
+        margin-top: -10px;
+    }
+
+    .scam-filter {
+        font-size: 12px;
+        padding: 9px 13px;
+    }
+}

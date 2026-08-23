@@ -99,7 +99,7 @@
                     </h1>
 
                     <p>
-                        Aprenda a identificar os principais golpes digitais
+                        Aprenda a identificar os principais golpes digitais e situações de risco do dia a dia
                         e descubra como se proteger de mensagens, links e
                         pedidos suspeitos.
                     </p>
@@ -263,7 +263,7 @@
                     </span>
 
                     <h2>
-                        Conheça os golpes mais comuns.
+                        Conheça golpes digitais e do mundo real.
                     </h2>
 
                     <p>
@@ -273,194 +273,211 @@
                 </div>
 
 
-                <div class="scam-grid">
-
-                    <!-- CARD 1 -->
-
-                    <article class="scam-card">
-
-                        <div class="scam-icon">💸</div>
-
-                        <div class="scam-content">
-
-                            <span class="risk high">
-                                ALTO RISCO
-                            </span>
-
-                            <h3>Pix falso</h3>
-
-                            <p>
-                                Alguém tenta convencer você a fazer um Pix
-                                usando urgência ou uma história falsa.
-                            </p>
-
-                            <button
-                                class="learn-more"
-                                data-scam="pix"
-                            >
-                                Saiba como evitar →
-                            </button>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- CARD 2 -->
-
-                    <article class="scam-card">
-
-                        <div class="scam-icon">📱</div>
-
-                        <div class="scam-content">
-
-                            <span class="risk high">
-                                MUITO COMUM
-                            </span>
-
-                            <h3>WhatsApp falso</h3>
-
-                            <p>
-                                O criminoso finge ser alguém conhecido e
-                                pede dinheiro ou informações.
-                            </p>
-
-                            <button
-                                class="learn-more"
-                                data-scam="whatsapp"
-                            >
-                                Saiba como evitar →
-                            </button>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- CARD 3 -->
-
-                    <article class="scam-card">
-
-                        <div class="scam-icon">🏦</div>
-
-                        <div class="scam-content">
-
-                            <span class="risk medium">
-                                ATENÇÃO
-                            </span>
-
-                            <h3>Falso funcionário</h3>
-
-                            <p>
-                                Alguém entra em contato dizendo trabalhar
-                                para um banco ou empresa.
-                            </p>
-
-                            <button
-                                class="learn-more"
-                                data-scam="bank"
-                            >
-                                Saiba como evitar →
-                            </button>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- CARD 4 -->
-
-                    <article class="scam-card">
-
-                        <div class="scam-icon">💼</div>
-
-                        <div class="scam-content">
-
-                            <span class="risk medium">
-                                ATENÇÃO
-                            </span>
-
-                            <h3>Falsa vaga</h3>
-
-                            <p>
-                                Uma suposta oportunidade de emprego é usada
-                                para pedir dinheiro ou dados pessoais.
-                            </p>
-
-                            <button
-                                class="learn-more"
-                                data-scam="job"
-                            >
-                                Saiba como evitar →
-                            </button>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- CARD 5 -->
-
-                    <article class="scam-card">
-
-                        <div class="scam-icon">🎁</div>
-
-                        <div class="scam-content">
-
-                            <span class="risk medium">
-                                ATENÇÃO
-                            </span>
-
-                            <h3>Falso prêmio</h3>
-
-                            <p>
-                                Você recebe uma mensagem dizendo que ganhou
-                                um prêmio, mas precisa pagar ou fornecer dados.
-                            </p>
-
-                            <button
-                                class="learn-more"
-                                data-scam="prize"
-                            >
-                                Saiba como evitar →
-                            </button>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- CARD 6 -->
-
-                    <article class="scam-card">
-
-                        <div class="scam-icon">🔗</div>
-
-                        <div class="scam-content">
-
-                            <span class="risk high">
-                                MUITO COMUM
-                            </span>
-
-                            <h3>Phishing</h3>
-
-                            <p>
-                                Links e páginas falsas tentam roubar senhas
-                                ou informações pessoais.
-                            </p>
-
-                            <button
-                                class="learn-more"
-                                data-scam="phishing"
-                            >
-                                Saiba como evitar →
-                            </button>
-
-                        </div>
-
-                    </article>
-
+                <div class="scam-filters" aria-label="Filtrar golpes">
+                    <button class="scam-filter active" data-filter="all">Todos</button>
+                    <button class="scam-filter" data-filter="digital">💻 Golpes digitais</button>
+                    <button class="scam-filter" data-filter="real">🌎 Mundo real</button>
                 </div>
+
+                <div class="scam-grid">
+                    <article class="scam-card" data-category="digital">
+                        <div class="scam-icon">💸</div>
+                        <div class="scam-content">
+                            <span class="risk high">ALTO RISCO</span>
+                            <span class="scam-type">Golpe digital</span>
+                            <h3>Pix falso</h3>
+                            <p>Alguém tenta convencer você a fazer um Pix usando urgência ou uma história falsa.</p>
+                            <button class="learn-more" data-scam="pix">Saiba como evitar →</button>
+                        </div>
+                    </article>
+
+                    <article class="scam-card" data-category="digital">
+                        <div class="scam-icon">📱</div>
+                        <div class="scam-content">
+                            <span class="risk high">ALTO RISCO</span>
+                            <span class="scam-type">Golpe digital</span>
+                            <h3>WhatsApp falso</h3>
+                            <p>O criminoso finge ser alguém conhecido, geralmente usando outro número, e pede dinheiro ou informações.</p>
+                            <button class="learn-more" data-scam="whatsapp">Saiba como evitar →</button>
+                        </div>
+                    </article>
+
+                    <article class="scam-card" data-category="digital">
+                        <div class="scam-icon">🏦</div>
+                        <div class="scam-content">
+                            <span class="risk high">ALTO RISCO</span>
+                            <span class="scam-type">Golpe digital</span>
+                            <h3>Falso funcionário do banco</h3>
+                            <p>O criminoso se apresenta como funcionário de um banco e afirma existir algum problema na conta da vítima.</p>
+                            <button class="learn-more" data-scam="bank">Saiba como evitar →</button>
+                        </div>
+                    </article>
+
+                    <article class="scam-card" data-category="digital">
+                        <div class="scam-icon">💼</div>
+                        <div class="scam-content">
+                            <span class="risk medium">ATENÇÃO</span>
+                            <span class="scam-type">Golpe digital</span>
+                            <h3>Falsa vaga de emprego</h3>
+                            <p>Uma falsa oportunidade de emprego pode ser usada para obter dinheiro ou dados pessoais.</p>
+                            <button class="learn-more" data-scam="job">Saiba como evitar →</button>
+                        </div>
+                    </article>
+
+                    <article class="scam-card" data-category="digital">
+                        <div class="scam-icon">🎁</div>
+                        <div class="scam-content">
+                            <span class="risk medium">ATENÇÃO</span>
+                            <span class="scam-type">Golpe digital</span>
+                            <h3>Falso prêmio</h3>
+                            <p>A vítima recebe uma mensagem dizendo que ganhou dinheiro, um produto ou algum benefício.</p>
+                            <button class="learn-more" data-scam="prize">Saiba como evitar →</button>
+                        </div>
+                    </article>
+
+                    <article class="scam-card" data-category="digital">
+                        <div class="scam-icon">🔗</div>
+                        <div class="scam-content">
+                            <span class="risk high">ALTO RISCO</span>
+                            <span class="scam-type">Golpe digital</span>
+                            <h3>Phishing</h3>
+                            <p>Links falsos podem levar a páginas que imitam bancos, lojas ou serviços conhecidos para roubar informações.</p>
+                            <button class="learn-more" data-scam="phishing">Saiba como evitar →</button>
+                        </div>
+                    </article>
+
+                    <article class="scam-card" data-category="digital">
+                        <div class="scam-icon">⚖️</div>
+                        <div class="scam-content">
+                            <span class="risk medium">ATENÇÃO</span>
+                            <span class="scam-type">Golpe digital</span>
+                            <h3>Falso advogado</h3>
+                            <p>O criminoso se passa por advogado ou escritório e informa que existe uma causa, indenização ou processo que exige pagamento.</p>
+                            <button class="learn-more" data-scam="lawyer">Saiba como evitar →</button>
+                        </div>
+                    </article>
+
+                    <article class="scam-card" data-category="digital">
+                        <div class="scam-icon">🏛️</div>
+                        <div class="scam-content">
+                            <span class="risk high">ALTO RISCO</span>
+                            <span class="scam-type">Golpe digital</span>
+                            <h3>Falso órgão do governo</h3>
+                            <p>O golpista se passa por órgão público e tenta obter dinheiro, documentos ou dados pessoais.</p>
+                            <button class="learn-more" data-scam="government">Saiba como evitar →</button>
+                        </div>
+                    </article>
+
+                    <article class="scam-card" data-category="digital">
+                        <div class="scam-icon">🤖</div>
+                        <div class="scam-content">
+                            <span class="risk high">ALTO RISCO</span>
+                            <span class="scam-type">Golpe digital</span>
+                            <h3>Golpe com voz ou imagem de IA</h3>
+                            <p>Criminosos podem usar inteligência artificial para imitar voz ou imagem de pessoas conhecidas e pedir dinheiro.</p>
+                            <button class="learn-more" data-scam="ai">Saiba como evitar →</button>
+                        </div>
+                    </article>
+
+                    <article class="scam-card" data-category="digital">
+                        <div class="scam-icon">📈</div>
+                        <div class="scam-content">
+                            <span class="risk high">ALTO RISCO</span>
+                            <span class="scam-type">Golpe digital</span>
+                            <h3>Falso investimento</h3>
+                            <p>Uma falsa oportunidade de investimento promete ganhos rápidos, altos ou garantidos para convencer a vítima a enviar dinheiro.</p>
+                            <button class="learn-more" data-scam="investment">Saiba como evitar →</button>
+                        </div>
+                    </article>
+
+                    <article class="scam-card" data-category="digital">
+                        <div class="scam-icon">🖥️</div>
+                        <div class="scam-content">
+                            <span class="risk high">ALTO RISCO</span>
+                            <span class="scam-type">Golpe digital</span>
+                            <h3>Falso suporte técnico</h3>
+                            <p>O criminoso finge ser do suporte de uma empresa e tenta convencer a vítima a instalar programas ou fornecer acesso ao dispositivo.</p>
+                            <button class="learn-more" data-scam="support">Saiba como evitar →</button>
+                        </div>
+                    </article>
+
+                    <article class="scam-card" data-category="digital">
+                        <div class="scam-icon">↩️</div>
+                        <div class="scam-content">
+                            <span class="risk medium">ATENÇÃO</span>
+                            <span class="scam-type">Golpe digital</span>
+                            <h3>Pix recebido por engano</h3>
+                            <p>A pessoa afirma ter enviado um Pix por engano e pede que você devolva o valor para uma conta diferente.</p>
+                            <button class="learn-more" data-scam="pix_return">Saiba como evitar →</button>
+                        </div>
+                    </article>
+
+                    <article class="scam-card" data-category="digital">
+                        <div class="scam-icon">🔐</div>
+                        <div class="scam-content">
+                            <span class="risk high">ALTO RISCO</span>
+                            <span class="scam-type">Golpe digital</span>
+                            <h3>Furto de conta</h3>
+                            <p>O criminoso tenta obter códigos de confirmação ou outras informações para assumir uma conta de mensagem, rede social ou serviço.</p>
+                            <button class="learn-more" data-scam="account">Saiba como evitar →</button>
+                        </div>
+                    </article>
+
+                    <article class="scam-card" data-category="real">
+                        <div class="scam-icon">🧑‍⚕️</div>
+                        <div class="scam-content">
+                            <span class="risk high">ALTO RISCO</span>
+                            <span class="scam-type">Mundo real</span>
+                            <h3>Falso cuidador</h3>
+                            <p>O criminoso se apresenta como cuidador ou profissional de saúde para conquistar a confiança da família e ter acesso à residência e à vítima.</p>
+                            <button class="learn-more" data-scam="caregiver">Saiba como evitar →</button>
+                        </div>
+                    </article>
+
+                    <article class="scam-card" data-category="real">
+                        <div class="scam-icon">📦</div>
+                        <div class="scam-content">
+                            <span class="risk high">ALTO RISCO</span>
+                            <span class="scam-type">Mundo real</span>
+                            <h3>Falso entregador</h3>
+                            <p>O criminoso usa uma suposta entrega para entrar em contato com a vítima e tentar obter pagamento, dados ou acesso à residência.</p>
+                            <button class="learn-more" data-scam="delivery">Saiba como evitar →</button>
+                        </div>
+                    </article>
+
+                    <article class="scam-card" data-category="real">
+                        <div class="scam-icon">🏧</div>
+                        <div class="scam-content">
+                            <span class="risk high">ALTO RISCO</span>
+                            <span class="scam-type">Mundo real</span>
+                            <h3>Falsa ajuda no caixa eletrônico</h3>
+                            <p>O criminoso se oferece para ajudar no caixa eletrônico e pode tentar descobrir senha, trocar cartão ou realizar operações sem autorização.</p>
+                            <button class="learn-more" data-scam="atm">Saiba como evitar →</button>
+                        </div>
+                    </article>
+
+                    <article class="scam-card" data-category="real">
+                        <div class="scam-icon">🪪</div>
+                        <div class="scam-content">
+                            <span class="risk medium">ATENÇÃO</span>
+                            <span class="scam-type">Mundo real</span>
+                            <h3>Falso funcionário do INSS</h3>
+                            <p>O criminoso se apresenta como funcionário do INSS ou outro serviço público e tenta obter dados, documentos ou dinheiro.</p>
+                            <button class="learn-more" data-scam="social_security">Saiba como evitar →</button>
+                        </div>
+                    </article>
+
+                    <article class="scam-card" data-category="real">
+                        <div class="scam-icon">🔧</div>
+                        <div class="scam-content">
+                            <span class="risk medium">ATENÇÃO</span>
+                            <span class="scam-type">Mundo real</span>
+                            <h3>Falso técnico ou prestador</h3>
+                            <p>O criminoso se passa por técnico, funcionário de empresa ou prestador para conseguir acesso à residência e aos bens.</p>
+                            <button class="learn-more" data-scam="technician">Saiba como evitar →</button>
+                        </div>
+                    </article>
+                </div>>
 
             </div>
 
@@ -831,7 +848,7 @@
 
         <p>
             Você acabou de conhecer alguns dos principais
-            golpes digitais. Que tal nos ajudar a melhorar
+            golpes digitais e do mundo real. Que tal nos ajudar a melhorar
             este projeto?
         </p>
 
