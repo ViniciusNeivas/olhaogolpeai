@@ -111,34 +111,78 @@ button {
     justify-content: space-between;
 }
 
-.logo {
-    display: flex;
+.brand {
+    display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 9px;
+
+    min-width: 0;
+}
+
+.brand-icon {
+    width: 48px;
+    height: 54px;
+
+    flex-shrink: 0;
+
+    object-fit: contain;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+}
+
+.brand-name {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
 
     font-size: 20px;
-    font-weight: 600;
-}
-
-.logo strong {
-    color: var(--primary);
-}
-
-.logo-icon {
-    width: 34px;
-    height: 34px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 10px;
-
-    background: var(--danger);
-    color: white;
-
+    line-height: 1;
     font-weight: 800;
+    letter-spacing: -0.5px;
+    white-space: nowrap;
 }
+
+.brand-name span {
+    color: var(--text);
+}
+
+.brand-name strong {
+    color: var(--danger);
+}
+
+.brand-tagline {
+    margin-top: 5px;
+
+    color: var(--text-light);
+
+    font-size: 7px;
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: 0.65px;
+    white-space: nowrap;
+}
+
+/*
+    PRIMEIRA VERSÃO DO ÍCONE DO HEADER
+    Mantida para referência.
+
+    .logo-icon {
+        width: 34px;
+        height: 34px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background: var(--danger);
+        color: white;
+        font-weight: 800;
+    }
+*/
 
 .nav {
     display: flex;
@@ -237,6 +281,32 @@ button {
     display: flex;
     gap: 14px;
     flex-wrap: wrap;
+}
+
+.hero-features {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+
+    margin-top: 22px;
+
+    color: var(--text-light);
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.hero-feature {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.hero-feature span {
+    color: var(--success);
+    font-size: 14px;
+    font-weight: 900;
 }
 
 
@@ -889,11 +959,11 @@ button {
 
 
 /* ========================================
-   CTA
+   CTA FINAL
 ======================================== */
 
 .cta {
-    padding: 70px 0;
+    padding: 42px 0;
 
     background: var(--primary);
 
@@ -906,22 +976,50 @@ button {
     align-items: center;
     justify-content: space-between;
 
-    gap: 30px;
+    gap: 32px;
+}
+
+.cta-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
 }
 
 .cta-icon {
-    font-size: 35px;
+    width: 54px;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
 }
 
-.cta h2 {
-    margin: 8px 0;
+.cta-icon img {
+    width: 48px;
+    height: 48px;
 
-    font-size: 34px;
+    object-fit: contain;
 }
 
-.cta p {
+.cta-text h2 {
+    margin: 0 0 5px;
+
+    font-size: 30px;
+    line-height: 1.15;
+}
+
+.cta-text p {
+    margin: 0;
+
     color: #dbe7ff;
+
+    font-size: 14px;
 }
+
 
 
 /* ========================================
@@ -951,13 +1049,44 @@ button {
     display: flex;
     align-items: center;
 
-    gap: 10px;
+    gap: 12px;
 }
 
-.footer-logo .logo-icon {
-    width: 28px;
-    height: 28px;
+.footer-logo-icon {
+    width: 44px;
+    height: 50px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
 }
+
+.footer-brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.footer-brand-text strong {
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.1;
+}
+
+.footer-brand-text span {
+    color: #94a3b8;
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.45px;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+/*
+    A versão anterior usava o favicon com fundo branco.
+    O novo ícone possui fundo transparente para funcionar
+    naturalmente sobre o fundo escuro do footer.
+*/
 
 .footer p {
     color: #94a3b8;
@@ -1163,16 +1292,74 @@ button {
         font-size: 20px;
     }
 
+    .cta {
+        padding: 36px 0;
+    }
+
     .cta-content {
         flex-direction: column;
 
         align-items: flex-start;
     }
 
+    .cta-left {
+        gap: 14px;
+    }
+
+    .cta-icon {
+        width: 46px;
+        height: 46px;
+    }
+
+    .cta-icon img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .cta-text h2 {
+        font-size: 25px;
+    }
+
+    .cta-text p {
+        font-size: 13px;
+    }
+
+    .cta .button {
+        align-self: stretch;
+        text-align: center;
+    }
+
     .footer-content {
         flex-direction: column;
 
         align-items: flex-start;
+    }
+
+    .footer-logo-icon {
+        width: 40px;
+        height: 46px;
+    }
+
+    .footer-brand-text span {
+        font-size: 8px;
+    }
+
+    .brand-icon {
+        width: 42px;
+        height: 46px;
+    }
+
+    .brand-name {
+        font-size: 17px;
+    }
+
+    .brand-tagline {
+        display: none;
+    }
+
+    .hero-features {
+        justify-content: center;
+        gap: 10px 16px;
     }
 
 }
@@ -1404,7 +1591,6 @@ button {
 
 }
 
-
 @keyframes feedbackSlideUp {
 
     from {
@@ -1419,7 +1605,6 @@ button {
 
 }
 
-
 @media (max-width: 500px) {
 
     .feedback-modal {
@@ -1430,4 +1615,17 @@ button {
         font-size: 24px;
     }
 
+}
+
+/* ========================================
+   LOGO PRINCIPAL
+======================================== */
+
+.logo-image {
+    display: block;
+
+    width: 165px;
+    height: auto;
+
+    object-fit: contain;
 }

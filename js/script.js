@@ -620,7 +620,7 @@ const feedbackFormButton =
 if (feedbackFormButton) {
 
     feedbackFormButton.href =
-        GOOGLE_FORMS_URL;
+        'https://forms.gle/1QxhqprhJYPcrcNx7';
 
 }
 
