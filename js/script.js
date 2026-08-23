@@ -588,13 +588,23 @@ loadQuestion();
    POPUP DE AVALIAÇÃO
 ======================================== */
 
+/*
+ * Quando você criar o Google Forms,
+ * coloque o link aqui.
+ */
 const GOOGLE_FORMS_URL =
-    "COLE_AQUI_O_LINK_DO_GOOGLE_FORMS";
+    "https://forms.gle/VYNSQEqrfk97vyLJ7";
 
-const FEEDBACK_DELAY =
-    5000;
+/*
+ * Tempo de espera depois que o usuário
+ * termina o quiz.
+ *
+ * 5000 = 5 segundos
+ */
+const FEEDBACK_DELAY = 5000;
 
 let feedbackTimer = null;
+
 
 /* ========================================
    ELEMENTOS DO POPUP
@@ -618,22 +628,17 @@ const feedbackFormButton =
 ======================================== */
 
 if (feedbackFormButton) {
-
-    feedbackFormButton.href =
-        'https://forms.gle/1QxhqprhJYPcrcNx7';
-
+    feedbackFormButton.href = "https://forms.gle/VYNSQEqrfk97vyLJ7";
 }
+
 
 /* ========================================
    MOSTRAR POPUP
 ======================================== */
 
 function showFeedbackPopup() {
-
     feedbackOverlay.classList.remove("hidden");
-
     document.body.style.overflow = "hidden";
-
 }
 
 
@@ -642,11 +647,8 @@ function showFeedbackPopup() {
 ======================================== */
 
 function closeFeedbackPopup() {
-
     feedbackOverlay.classList.add("hidden");
-
     document.body.style.overflow = "";
-
 }
 
 
@@ -677,15 +679,9 @@ feedbackLater.addEventListener(
 feedbackOverlay.addEventListener(
     "click",
     function(event) {
-
-        if (
-            event.target === feedbackOverlay
-        ) {
-
+        if (event.target === feedbackOverlay) {
             closeFeedbackPopup();
-
         }
-
     }
 );
 
@@ -697,16 +693,12 @@ feedbackOverlay.addEventListener(
 document.addEventListener(
     "keydown",
     function(event) {
-
         if (
             event.key === "Escape" &&
             !feedbackOverlay.classList.contains("hidden")
         ) {
-
             closeFeedbackPopup();
-
         }
-
     }
 );
 
@@ -716,20 +708,15 @@ document.addEventListener(
 ======================================== */
 
 function scheduleFeedbackAfterQuiz() {
-
     if (feedbackTimer) {
         clearTimeout(feedbackTimer);
     }
 
     feedbackTimer = setTimeout(
         function() {
-
             showFeedbackPopup();
-
             feedbackTimer = null;
-
         },
         FEEDBACK_DELAY
     );
-
 }

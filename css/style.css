@@ -104,7 +104,7 @@ button {
 }
 
 .header-content {
-    min-height: 72px;
+    min-height: 68px;
 
     display: flex;
     align-items: center;
@@ -120,8 +120,8 @@ button {
 }
 
 .brand-icon {
-    width: 48px;
-    height: 54px;
+    width: 46px;
+    height: 50px;
 
     flex-shrink: 0;
 
@@ -156,14 +156,14 @@ button {
 }
 
 .brand-tagline {
-    margin-top: 5px;
+    margin-top: 4px;
 
     color: var(--text-light);
 
-    font-size: 7px;
+    font-size: 8.5px;
     line-height: 1;
     font-weight: 800;
-    letter-spacing: 0.65px;
+    letter-spacing: 0.7px;
     white-space: nowrap;
 }
 
@@ -963,7 +963,7 @@ button {
 ======================================== */
 
 .cta {
-    padding: 42px 0;
+    padding: 32px 0;
 
     background: var(--primary);
 
@@ -982,14 +982,14 @@ button {
 .cta-left {
     display: flex;
 
-    align-items: center;
+    align-items: flex-start;
 
     gap: 18px;
 }
 
 .cta-icon {
-    width: 54px;
-    height: 54px;
+    width: 50px;
+    height: 50px;
 
     display: flex;
     align-items: center;
@@ -999,16 +999,16 @@ button {
 }
 
 .cta-icon img {
-    width: 48px;
-    height: 48px;
+    width: 50px;
+    height: 50px;
 
     object-fit: contain;
 }
 
 .cta-text h2 {
-    margin: 0 0 5px;
+    margin: 0 0 4px;
 
-    font-size: 30px;
+    font-size: 28px;
     line-height: 1.15;
 }
 
@@ -1027,7 +1027,7 @@ button {
 ======================================== */
 
 .footer {
-    padding: 35px 0;
+    padding: 24px 0;
 
     background: #0f172a;
 
@@ -1035,26 +1035,25 @@ button {
 }
 
 .footer-content {
-    display: flex;
-
+    display: grid;
+    grid-template-columns: 1fr auto auto;
     align-items: center;
-    justify-content: space-between;
-
-    gap: 20px;
+    gap: 36px;
 
     font-size: 13px;
 }
 
 .footer-logo {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 
-    gap: 12px;
+    gap: 18px;
 }
 
 .footer-logo-icon {
-    width: 44px;
+    width: 50px;
     height: 50px;
+    padding: 3px;
 
     object-fit: contain;
 
@@ -1065,17 +1064,18 @@ button {
     display: flex;
     flex-direction: column;
     gap: 4px;
+    padding-top: 10px;
 }
 
 .footer-brand-text strong {
     color: #ffffff;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 1.1;
 }
 
 .footer-brand-text span {
     color: #94a3b8;
-    font-size: 9px;
+    font-size: 8px;
     font-weight: 600;
     letter-spacing: 0.45px;
     text-transform: uppercase;
@@ -1235,7 +1235,7 @@ button {
     .nav {
         position: absolute;
 
-        top: 72px;
+        top: 68px;
         left: 0;
         right: 0;
 
@@ -1293,7 +1293,7 @@ button {
     }
 
     .cta {
-        padding: 36px 0;
+        padding: 28px 0;
     }
 
     .cta-content {
@@ -1307,17 +1307,17 @@ button {
     }
 
     .cta-icon {
-        width: 46px;
-        height: 46px;
+        width: 44px;
+        height: 44px;
     }
 
     .cta-icon img {
-        width: 42px;
-        height: 42px;
+        width: 44px;
+        height: 44px;
     }
 
     .cta-text h2 {
-        font-size: 25px;
+        font-size: 24px;
     }
 
     .cta-text p {
@@ -1329,32 +1329,58 @@ button {
         text-align: center;
     }
 
-    .footer-content {
-        flex-direction: column;
+    .footer {
+        padding: 22px 0;
+    }
 
+    .footer-content {
+        display: flex;
+        flex-direction: column;
         align-items: flex-start;
+        gap: 14px;
+    }
+
+    .footer-logo {
+        gap: 14px;
     }
 
     .footer-logo-icon {
-        width: 40px;
-        height: 46px;
+        width: 44px;
+        height: 44px;
+        padding: 2px;
+    }
+
+    .footer-brand-text {
+        gap: 3px;
+    }
+
+    .footer-brand-text strong {
+        font-size: 14px;
     }
 
     .footer-brand-text span {
-        font-size: 8px;
+        font-size: 7px;
+        letter-spacing: 0.35px;
+    }
+
+    .footer p {
+        margin: 0;
     }
 
     .brand-icon {
-        width: 42px;
-        height: 46px;
+        width: 40px;
+        height: 44px;
     }
 
     .brand-name {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .brand-tagline {
-        display: none;
+        display: block;
+        margin-top: 3px;
+        font-size: 7px;
+        letter-spacing: 0.5px;
     }
 
     .hero-features {
